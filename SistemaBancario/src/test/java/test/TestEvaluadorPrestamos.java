@@ -1,6 +1,6 @@
 package test;
 
-
+import Modelo.EvaluadorPrestamos;
 import Modelo.ResultadoPrestamo;
 import Modelo.Solicitante;
 
@@ -13,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Keiver
  */
 /**
- * Suite de pruebas JUnit 5 para EvaluadorPrestamos. Cubre cada regla de
- * la tabla de decisión y casos de violación de precondiciones.
+ * Suite de pruebas JUnit 5 para EvaluadorPrestamos. Cubre cada regla de la
+ * tabla de decisión y casos de violación de precondiciones.
  */
 public class TestEvaluadorPrestamos {
 
@@ -72,13 +72,8 @@ public class TestEvaluadorPrestamos {
     @Test
     @DisplayName("R6: menor de 18 años → excepción (precondición de negocio)")
     void testR6_MenorDeEdad() {
-        assertThrows(IllegalArgumentException.class, ()
-                -> new Solicitante("Franco Kids", 16,
-                        700, false, 0.0, 500.0));
-        // Si el objeto se construye con edad > 0 pero < 18,
-        // la excepción la lanza evaluarPrestamo.
-        // Aquí forzamos la construcción con edad 17 válida para
-        // el constructor (edad > 0) pero inválida para el evaluador.
+        // El constructor permite edad > 0, la validación de negocio (>=18)
+        // la hace evaluarPrestamo, no el constructor.
         Solicitante menor = new Solicitante("Franco Kids", 17,
                 700, false, 0.0, 500.0);
         assertThrows(IllegalArgumentException.class, ()
