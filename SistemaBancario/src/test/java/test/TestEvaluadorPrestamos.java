@@ -18,9 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TestEvaluadorPrestamos {
 
-    // ─────────────────────────────────────────────────────────────────────────
     //  REGLAS DE LA TABLA DE DECISIÓN
-    // ─────────────────────────────────────────────────────────────────────────
     @Test
     @DisplayName("R1: puntaje≥700, sin deudas, monto válido → APROBADO")
     void testR1_AprobadoAutomatico() {
@@ -120,9 +118,7 @@ public class TestEvaluadorPrestamos {
         assertEquals(ResultadoPrestamo.APROBADO, result);
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
     //  VIOLACIONES DE PRECONDICIONES
-    // ─────────────────────────────────────────────────────────────────────────
     @Test
     @DisplayName("PRE: monto negativo → IllegalArgumentException")
     void testPrecondicion_MontoNegativo() {
