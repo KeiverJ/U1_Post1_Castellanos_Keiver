@@ -1,8 +1,12 @@
 package Modelo;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+/**
+ * Enumeración que representa los posibles resultados
+ * de la evaluación de una solicitud de préstamo bancario.
+ * {@link #APROBADO} – el préstamo es aprobado automáticamente.
+ * {@link #RECHAZADO} – el préstamo es denegado.
+ * {@link #REVISION_MANUAL} – el caso requiere revisión humana.
+ * 
  */
 
 /**
