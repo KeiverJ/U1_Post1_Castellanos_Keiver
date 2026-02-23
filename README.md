@@ -15,8 +15,6 @@ y una **tabla de decisión** de 9 reglas. La implementación está en Java 21 co
 
 ---
 
----
-
 ## Requisitos
 
 | Herramienta | Versión |
@@ -67,17 +65,17 @@ BUILD SUCCESS
 
 ## Reglas de negocio implementadas
 
-| Regla | Condiciones                                                         | Resultado                                    |
-| ----- | ------------------------------------------------------------------- | -------------------------------------------- |
-| R1    | Edad ≥ 18, puntaje ≥ 700, sin deudas, monto ≤ 5× ingreso            | **APROBADO**                                 |
-| R2    | Edad ≥ 18, puntaje ≥ 700, con deudas, monto ≤ 5× ingreso            | **REVISIÓN MANUAL**                          |
-| R3    | Edad ≥ 18, puntaje ∈ [500,699], empleo ≥ 2 años, monto ≤ 5× ingreso | **REVISIÓN MANUAL**                          |
-| R4    | Edad ≥ 18, puntaje ∈ [500,699], empleo < 2 años                     | **RECHAZADO**                                |
-| R5    | Edad ≥ 18, puntaje < 500                                            | **RECHAZADO**                                |
-| R6    | Edad < 18                                                           | **RECHAZADO** (excepción en evaluarPrestamo) |
-| R7    | Edad ≥ 18, puntaje ≥ 700, sin deudas, monto > 5× ingreso            | **RECHAZADO**                                |
-| R8    | Edad ≥ 18, puntaje ≥ 700, con deudas, monto > 5× ingreso            | **RECHAZADO**                                |
-| R9    | Edad ≥ 18, puntaje ∈ [500,699], empleo ≥ 2 años, monto > 5× ingreso | **RECHAZADO**                                |
+| Regla | Condiciones                                                         | Resultado           |
+| ----- | ------------------------------------------------------------------- | ------------------- |
+| R1    | Edad ≥ 18, puntaje ≥ 700, sin deudas, monto ≤ 5× ingreso            | **APROBADO**        |
+| R2    | Edad ≥ 18, puntaje ≥ 700, con deudas, monto ≤ 5× ingreso            | **REVISIÓN MANUAL** |
+| R3    | Edad ≥ 18, puntaje ∈ [500,699], empleo ≥ 2 años, monto ≤ 5× ingreso | **REVISIÓN MANUAL** |
+| R4    | Edad ≥ 18, puntaje ∈ [500,699], empleo < 2 años                     | **RECHAZADO**       |
+| R5    | Edad ≥ 18, puntaje < 500                                            | **RECHAZADO**       |
+| R6    | Edad < 18                                                           | **RECHAZADO**       |
+| R7    | Edad ≥ 18, puntaje ≥ 700, sin deudas, monto > 5× ingreso            | **RECHAZADO**       |
+| R8    | Edad ≥ 18, puntaje ≥ 700, con deudas, monto > 5× ingreso            | **RECHAZADO**       |
+| R9    | Edad ≥ 18, puntaje ∈ [500,699], empleo ≥ 2 años, monto > 5× ingreso | **RECHAZADO**       |
 
 ---
 
