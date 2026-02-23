@@ -65,17 +65,17 @@ BUILD SUCCESS
 
 ## Reglas de negocio implementadas
 
-| Regla | Condiciones                                                         | Resultado           |
-| ----- | ------------------------------------------------------------------- | ------------------- |
-| R1    | Edad ≥ 18, puntaje ≥ 700, sin deudas, monto ≤ 5× ingreso            | **APROBADO**        |
-| R2    | Edad ≥ 18, puntaje ≥ 700, con deudas, monto ≤ 5× ingreso            | **REVISIÓN MANUAL** |
-| R3    | Edad ≥ 18, puntaje ∈ [500,699], empleo ≥ 2 años, monto ≤ 5× ingreso | **REVISIÓN MANUAL** |
-| R4    | Edad ≥ 18, puntaje ∈ [500,699], empleo < 2 años                     | **RECHAZADO**       |
-| R5    | Edad ≥ 18, puntaje < 500                                            | **RECHAZADO**       |
-| R6    | Edad < 18                                                           | **RECHAZADO**       |
-| R7    | Edad ≥ 18, puntaje ≥ 700, sin deudas, monto > 5× ingreso            | **RECHAZADO**       |
-| R8    | Edad ≥ 18, puntaje ≥ 700, con deudas, monto > 5× ingreso            | **RECHAZADO**       |
-| R9    | Edad ≥ 18, puntaje ∈ [500,699], empleo ≥ 2 años, monto > 5× ingreso | **RECHAZADO**       |
+| Condición / Regla          | R1           | R2         | R3         | R4        | R5        | R6        | R7        | R8        | R9        |
+| -------------------------- | ------------ | ---------- | ---------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| Edad ≥ 18                  | V            | V          | V          | V         | V         | **F**     | V         | V         | V         |
+| Puntaje ≥ 700              | V            | V          | F          | F         | F         | —         | V         | V         | F         |
+| Sin deudas                 | V            | F          | —          | —         | —         | —         | V         | F         | —         |
+| Puntaje ∈ [500, 699]       | —            | —          | V          | V         | F         | —         | —         | —         | V         |
+| Empleo ≥ 2 años            | —            | —          | V          | F         | —         | —         | —         | —         | V         |
+| Monto ≤ 5× ingreso mensual | V            | V          | V          | V         | V         | —         | **F**     | **F**     | **F**     |
+| **Resultado**              | **APROBADO** | **REVIS.** | **REVIS.** | **RECH.** | **RECH.** | **RECH.** | **RECH.** | **RECH.** | **RECH.** |
+
+> **V** = Verdadero · **F** = Falso · **—** = No relevante
 
 ---
 
